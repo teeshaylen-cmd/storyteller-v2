@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Storyteller</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+window.mermaid = mermaid;
+
+mermaid.initialize({
+startOnLoad:false,
+securityLevel:'loose',
+theme:'default'
+});
+</script>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Storyteller</h1>
+
+<p class="subtitle">
+Paste meeting transcript text to generate a summary and diagram
+</p>
+
+<textarea id="transcript" placeholder="Paste meeting transcript here..."></textarea>
+
+<div class="buttons">
+<button id="generate">Generate</button>
+<button id="clear">Clear</button>
+<button id="demo">Load Demo</button>
+</div>
+
+<h2>Summary</h2>
+<div id="summary" class="box"></div>
+
+<h2>Topics</h2>
+<div id="topics" class="box"></div>
+
+<h2>Prompt</h2>
+<div id="prompt" class="box"></div>
+
+<h2>Flowchart</h2>
+<pre id="code" class="code"></pre>
+
+<div id="diagram"></div>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
